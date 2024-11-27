@@ -45,7 +45,7 @@ public class MemberSendEmail {
 			
 			session = Session.getInstance(props, new Authenticator() {
 				@Override
-                private PasswordAuthentication getPasswordAuthentication() {
+				protected PasswordAuthentication getPasswordAuthentication() {
 					return new PasswordAuthentication(user_name, pw);
 				}
 			});
