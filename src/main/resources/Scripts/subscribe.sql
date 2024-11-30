@@ -10,7 +10,7 @@ SELECT * from ARTIST_GROUP ;
 SELECT * from MEMBER;
 SELECT * FROM faq;
 ALTER TABLE faq MODIFY (faq_content VARCHAR2(3000));
-select count(*) as result from member where member_name='박댕댕' and email='hey@n.com'
+select count(*) as result from member where member_name='박댕댕' and email='hey@n.com';
 
 CREATE SEQUENCE seq_subscribe_no
 nocache
@@ -18,9 +18,9 @@ nocycle;
 select * from user_sequences;
 
 --회원 구독 더미 데이터 추가(김말년 회원qwerty -> iu, aespa)
-INSERT INTO SUBSCRIBE values(seq_subscribe_no.nextval, 4,7);
-INSERT INTO SUBSCRIBE values(seq_subscribe_no.nextval, 4,6);
-INSERT INTO SUBSCRIBE values(seq_subscribe_no.nextval, 5,7);
+INSERT INTO SUBSCRIBE values(seq_subscribe_no.nextval, 4,3);
+INSERT INTO SUBSCRIBE values(seq_subscribe_no.nextval, 4,3);
+INSERT INTO SUBSCRIBE values(seq_subscribe_no.nextval, 5,3);
 
 --구독자가 없는 사람은 조회가 불가능함
 SELECT * FROM subscribe 
