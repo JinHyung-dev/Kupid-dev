@@ -11,12 +11,16 @@ CREATE TABLE LIKE_FEED(
 	likes_switch number(1) DEFAULT 0,
 	FOREIGN KEY (memberNo) REFERENCES MEMBER(MEMBER_NO),
 	FOREIGN KEY (feed_No) REFERENCES FEED(FEED_NO)
-
 );
 
-ALTER TABLE LIKE_FEED ADD likes_switch NUMBER(1) DEFAULT 0;
+CREATE TABLE like_feed (
+                           MEMBERNO NUMBER REFERENCES MEMBER(member_no) ON DELETE cascade,
+                           FEED_NO NUMBER REFERENCES FEED(feed_no) ON DELETE cascade
+);
 
---DROP TABLE LIKE_feed;
+--ALTER TABLE LIKE_FEED ADD likes_switch NUMBER(1) DEFAULT 0;
+
+DROP TABLE LIKE_feed;
 alter session set ddl_lock_timeout = 5;
 
 SELECT * FROM LIKE_FEED LEFT JOIN feed using(feed_no);
@@ -55,3 +59,31 @@ UPDATE feed SET likes =0;
 DROP TRIGGER TR_LIKE_FEED_del;
 
 ALTER TABLE LIKE_FEED DROP COLUMN likes_switch;
+
+ALTER TABLE LIKE_feed
+    ADD CONSTRAINT CASCADE_LIKE_FEED_FEED
+        FOREIGN KEY (feed_no)
+            REFERENCES feed(feed_no)
+                ON DELETE CASCADE;
+
+
+SELECT * FROM
+    (SELECT ROWNUM AS RNUM,B.* FROM
+        (SELECT ROWNUM AS REALNUM, INB.* FROM
+            (SELECT * FROM FEED
+                               LEFT JOIN (SELECT FEED_NO, LISTAGG(FILE_PATH, ',') WITHIN GROUP(ORDER BY file_no) AS file_Path, COUNT(1) FROM FEED_FILE GROUP BY FEED_NO) USING (FEED_NO)
+                               LEFT JOIN MEMBER using(MEMBER_NO)
+                               LEFT JOIN (SELECT count(FEED_NO) commentCnt,FEED_NO  FROM reply GROUP BY FEED_NO) using(feed_no)
+             ORDER BY WRITEDATE DESC) INB )B)
+WHERE REALNUM BETWEEN 1 AND 10;
+
+
+alter table LIKe_feed
+
+    add constraint CASCADE_LIKE_FEED_FEED
+
+        FOREIGN KEY (feed_no)
+
+            references  feed(feed_no);
+
+--on delete cascade;

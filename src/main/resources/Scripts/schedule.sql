@@ -4,9 +4,6 @@ SELECT * FROM tabs;
 
 SELECT * FROM ARTIST_GROUP LEFT JOIN SCHEDULE s USING (group_no) WHERE s.SC_TITLE IS NOT NULL AND GROUP_NO =3;
 
-
-INSERT INTO SCHEDULE values()
-
 INSERT INTO schedule values(seq_sc_no.nextval,'생일',TO_DATE('2024-05-29', 'YYYY-MM-DD'),TO_DATE('2024-05-29', 'YYYY-MM-DD'),null,3);
 
 
@@ -24,3 +21,8 @@ CREATE TABLE schedule (
 DROP TABLE SCHEDULE ;
 
 SELECT * FROM schedule;
+
+SELECT * FROM schedule LEFT JOIN MEMBER using (GROUP_NO);
+
+INSERT INTO schedule values(seq_sc_no.nextval,'생일',NULL,null,NULL,3);
+
