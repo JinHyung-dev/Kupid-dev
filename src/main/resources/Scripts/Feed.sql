@@ -10,6 +10,7 @@ CREATE TABLE FEED (
 	CONSTRAINT pk_feed_no PRIMARY KEY (feed_no)
 --	CONSTRAINT fk_member_no FOREIGN KEY(member_no) REFERENCES MEMBER(USERID) ON DELETE SET NULL--
 );
+ALTER TABLE FEED ADD GROUP_NO NUMBER;
 
 ALTER TABLE feed MODIFY updatedate date DEFAULT SYSDATE;
 
@@ -21,7 +22,10 @@ CREATE SEQUENCE seq_feed_no
     INCREMENT BY 1;
 
 INSERT INTO FEED VALUES(seq_feed_no.nextval,1,1,1,DEFAULT,DEFAULT,1,1);
+INSERT INTO FEED VALUES(seq_feed_no.nextval,3,'qwerty','아이유를 보면 행복해요',DEFAULT,DEFAULT,0,0,4);
+commit;
 SELECT * FROM feed;
+SELECT * FROM MEMBER;
 
 SELECT * FROM tabs;
 
@@ -51,7 +55,7 @@ START WITH 1
 INSERT INTO feed VALUES (seq_feed_no.nextval,1,1,1,DEFAULT,DEFAULT,1,1);
    
    
-   SELECT * FROM FEED JOIN FEED_FILE USING (FEED_NO) ORDER BY WRITEDATE DESC;
+SELECT * FROM FEED LEFT JOIN FEED_FILE USING (FEED_NO) ORDER BY WRITEDATE DESC;
 
 INSERT INTO feed_file VALUES(seq_feed_file_no.nextval,seq_feed_no.CURRVAL,'123213');
 SELECT seq_feed_no.nextval FROM dual;
@@ -60,11 +64,7 @@ BEGIN
     INSERT INTO feed VALUES (seq_feed_no.nextval,1,1,1,DEFAULT,DEFAULT,1,1);
     INSERT INTO feed_file VALUES (seq_feed_file_no.nextval,seq_feed_no.CURRVAL,'3232323');
 END;
-
-
-INSERT INTO feed_file VALUES(seq_feed_file_no.nextval,462,'ㄴㅁㅇㅁ');
-
-
+commit;
 SELECT * FROM 
 	(SELECT ROWNUM AS RNUM,B.* FROM 
 		(SELECT ROWNUM AS REALNUM, INB.* FROM 
