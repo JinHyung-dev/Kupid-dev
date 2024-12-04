@@ -521,7 +521,7 @@ public class FeedDao {
 				.likes(rs.getInt("likes"))
 				.memberNo(rs.getInt("memberno"))
 				.replyContent(rs.getString("reply_content"))
-				.groupNo(rs.getInt("GROUP_NO"))
+//				.groupNo(rs.getInt("GROUP_NO"))
 				.build();
 	}
 }
