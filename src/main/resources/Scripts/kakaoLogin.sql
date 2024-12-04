@@ -1,0 +1,5 @@
+ALTER TABLE MEMBER ADD kakao_id varchar(50);
+ALTER TABLE MEMBER ADD kakao_pw varchar(50);
+
+--ALTER TABLE MEMBER DROP COLUMN kakao_id;
+SELECT * FROM "MEMBER";
