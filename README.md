@@ -9,8 +9,8 @@
 - 개발기간: 2024-05-20 ~ 2024-05-31
 - 개발인원: 총 4명
 
-| 팀장 | 팀원 | 팀원 | 팀원 | 팀원 | 팀원 |
-| --- | --- | --- | --- | --- | --- |
+| 팀장 | 팀원 | 팀원 | 팀원 |
+| --- | --- | --- | --- |
 | [박진형](https://github.com/JinHyung-dev) | [김혜정](https://github.com/kimhyejeongd) | [이기수](https://github.com/Kisoo123) | [이우석](https://github.com/lws9) |
 
 ## 목적 및 기대효과
