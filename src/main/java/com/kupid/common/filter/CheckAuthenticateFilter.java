@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet Filter implementation class CheckAuthenticateFilter
  */
-@WebFilter("/manager/*")
+@WebFilter("/admin/*")
 public class CheckAuthenticateFilter extends HttpFilter implements Filter {
        
     /**

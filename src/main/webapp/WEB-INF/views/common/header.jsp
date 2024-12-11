@@ -101,7 +101,7 @@
 	          </a>
 	          <ul class="dropdown-menu text-small sticky-top" style="z-index: 2000">
 	          	<%if(loginMember.getMemberId().equals("admin")){%>
-	          		<li><a class="dropdown-item" href="<%=request.getContextPath()%>/manager/home.do">관리자페이지</a></li>
+	          		<li><a class="dropdown-item" href="<%=request.getContextPath()%>/admin/home.do">관리자페이지</a></li>
 	            	<li><hr class="dropdown-divider"></li>
 	          	<%} %>
 	            <li class="ms-3 my-1 fs-5">My KUPID</li>

@@ -1,10 +1,6 @@
-package com.kupid.main.controller;
+package com.kupid.admin.faq.controller;
 
-import com.google.gson.Gson;
-import com.kupid.group.model.dto.GroupDto;
-import com.kupid.admin.group.service.GroupService;
 import java.io.IOException;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class SearchGroupServlet
+ * Servlet implementation class FaqInsertServlet
  */
-@WebServlet("/searchgroup.do")
-public class SearchGroupServlet extends HttpServlet {
+@WebServlet("/admin/faqinsert.do")
+public class FaqInsertServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SearchGroupServlet() {
+    public FaqInsertServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,11 +26,7 @@ public class SearchGroupServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String keyword=request.getParameter("searchKeyword");
-		System.out.println(keyword);
-		
-		List<GroupDto> result=new GroupService().searchGroup(keyword,1,100);
-		new Gson().toJson(result, response.getWriter());
+		request.getRequestDispatcher("/WEB-INF/views/admin/faq/faqinsert.jsp").forward(request, response);
 	}
 
 	/**

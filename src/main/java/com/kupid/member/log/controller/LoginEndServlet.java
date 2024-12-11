@@ -61,7 +61,7 @@ public class LoginEndServlet extends HttpServlet {
 				if(!userId.equals("admin")) {//관리자로 로그인하면 메인페이지가 아니라 관리자 페이지로 이동되게 하는 로직
 					response.sendRedirect(request.getContextPath() + "/");
 				}else {
-					response.sendRedirect(request.getContextPath()+"/manager/home.do");
+					response.sendRedirect(request.getContextPath()+"/admin/home.do");
 				}
 			}else if(m!=null&&m.getMemberGrade().equals("탈퇴")) {//탈퇴된 애들 로그인 막는 로직
 				request.setAttribute("msg", "탈퇴된 회원입니다.");

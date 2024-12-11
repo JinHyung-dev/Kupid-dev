@@ -1,10 +1,7 @@
-package com.kupid.main.controller;
+package com.kupid.admin.answer.controller;
 
-import com.google.gson.Gson;
-import com.kupid.group.model.dto.GroupDto;
-import com.kupid.admin.group.service.GroupService;
+import com.kupid.admin.answer.service.AnswerService;
 import java.io.IOException;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,16 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class SearchGroupServlet
+ * Servlet implementation class AnswerUpdateEndServlet
  */
-@WebServlet("/searchgroup.do")
-public class SearchGroupServlet extends HttpServlet {
+@WebServlet("/admin/answerupdateend.do")
+public class AnswerUpdateEndServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SearchGroupServlet() {
+    public AnswerUpdateEndServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,11 +27,23 @@ public class SearchGroupServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String keyword=request.getParameter("searchKeyword");
-		System.out.println(keyword);
+		String title=request.getParameter("title");
+		String content=request.getParameter("content");
+		int ansNo=Integer.parseInt(request.getParameter("no"));
+
+		int result=new AnswerService().updateAnswer(ansNo,title,content);
+		String msg,loc;
+		if(result>0) {
+			msg="수정성공";
+			loc="/admin/inquirylist.do";
+		}else {
+			msg="수정실패";
+			loc="/admin/inquirylist.do";
+		}
+		request.setAttribute("msg", msg);
+		request.setAttribute("loc", loc);
 		
-		List<GroupDto> result=new GroupService().searchGroup(keyword,1,100);
-		new Gson().toJson(result, response.getWriter());
+		request.getRequestDispatcher("/WEB-INF/views/common/msg.jsp").forward(request, response);
 	}
 
 	/**

@@ -1,10 +1,8 @@
-package com.kupid.main.controller;
+package com.kupid.admin.notice.controller;
 
-import com.google.gson.Gson;
-import com.kupid.group.model.dto.GroupDto;
-import com.kupid.admin.group.service.GroupService;
+import com.kupid.admin.notice.model.dto.Notice;
+import com.kupid.admin.notice.service.NoticeService;
 import java.io.IOException;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class SearchGroupServlet
+ * Servlet implementation class NoticeUpdateServlet
  */
-@WebServlet("/searchgroup.do")
-public class SearchGroupServlet extends HttpServlet {
+@WebServlet("/admin/noticeupdate.do")
+public class NoticeUpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SearchGroupServlet() {
+    public NoticeUpdateServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,11 +28,16 @@ public class SearchGroupServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String keyword=request.getParameter("searchKeyword");
-		System.out.println(keyword);
+		int no=1;
+		try {
+			no=Integer.parseInt(request.getParameter("no"));
+		}catch(NumberFormatException e) {
+			
+		}
+		Notice n=new NoticeService().selectNoticeByNo(no);
+		request.setAttribute("notice", n);
+		request.getRequestDispatcher("/WEB-INF/views/admin/notice/noticeupdate.jsp").forward(request, response);
 		
-		List<GroupDto> result=new GroupService().searchGroup(keyword,1,100);
-		new Gson().toJson(result, response.getWriter());
 	}
 
 	/**

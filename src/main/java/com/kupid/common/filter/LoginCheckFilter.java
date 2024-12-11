@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
  */
 //TODO 수정필요
 
-@WebFilter(servletNames = {"memberView", "searchmember", "memberlist", "boardwrite"}, urlPatterns= {"/admin/*","/manager/*","/mypage/*","/inquiry/*","/membershipinsert.do","/marketview.do"})
+@WebFilter(servletNames = {"memberView", "searchmember", "memberlist", "boardwrite"}, urlPatterns= {"/admin/*","/admin/*","/mypage/*","/inquiry/*","/membershipinsert.do","/marketview.do"})
 
 
 public class LoginCheckFilter extends HttpFilter implements Filter {

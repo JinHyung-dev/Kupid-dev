@@ -1,8 +1,7 @@
-package com.kupid.main.controller;
+package com.kupid.admin.member.controller;
 
-import com.google.gson.Gson;
-import com.kupid.group.model.dto.GroupDto;
-import com.kupid.admin.group.service.GroupService;
+import com.kupid.admin.member.service.MemberService;
+import com.kupid.member.model.dto.MemberDto;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -12,16 +11,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class SearchGroupServlet
+ * Servlet implementation class MemberViewServlet
  */
-@WebServlet("/searchgroup.do")
-public class SearchGroupServlet extends HttpServlet {
+@WebServlet("/admin/memberview.do")
+public class MemberViewServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SearchGroupServlet() {
+    public MemberViewServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,11 +29,22 @@ public class SearchGroupServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String keyword=request.getParameter("searchKeyword");
-		System.out.println(keyword);
+		int no=Integer.parseInt(request.getParameter("no"));
+		MemberService ms=new MemberService();
 		
-		List<GroupDto> result=new GroupService().searchGroup(keyword,1,100);
-		new Gson().toJson(result, response.getWriter());
+		MemberDto m= ms.selectMemberByNo(no);
+		request.setAttribute("member", m);
+		List<MemberDto> sm= ms.selectSubscribeByNo(no);
+		request.setAttribute("subscribe", sm);
+		List<MemberDto> memship= ms.selectMembershipByNo(no);
+		request.setAttribute("membership", memship);
+
+		request.getRequestDispatcher("/WEB-INF/views/admin/member/adminmemberview.jsp").forward(request, response);
+		
+		
+		
+		
+		
 	}
 
 	/**
