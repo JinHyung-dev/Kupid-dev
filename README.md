@@ -73,7 +73,7 @@
 <table>
   <tr>
     <td style="vertical-align: top;"> 
-      <img src="assets/1.png"/> </td>
+      <img src="assets/1.png" width="800px"/> </td>
     <td style="vertical-align: top;">
 <b>상단 배너</b><br>
 
@@ -96,7 +96,7 @@
 <table>
   <tr>
     <td style="vertical-align: top;"> 
-      <img src="assets/3.png"/> </td>
+      <img src="assets/3.png" width="800px"/> </td>
     <td style="vertical-align: top;">
 <b>입력값 유효성 검증</b><br>
 
@@ -108,7 +108,7 @@
   </tr>
   <tr>
     <td style="vertical-align: top;"> 
-      <img src="assets/3-1.png"/> </td>
+      <img src="assets/3-1.png" width="800px"/> </td>
     <td style="vertical-align: top;">
 <b>이메일 검증</b><br>
 
@@ -118,7 +118,7 @@
   </tr>
   <tr>
     <td style="vertical-align: top;"> 
-      <img src="assets/3-2.png"/> </td>
+      <img src="assets/3-2.png" width="800px"/> </td>
     <td style="vertical-align: top;">
 <b>주소검증</b><br>
 
@@ -130,7 +130,7 @@
 ### 로그인
 <table>
   <tr>
-    <td style="vertical-align: top;"> <img src="assets/2.png"/> </td>
+    <td style="vertical-align: top;"> <img src="assets/2.png" width="800px"/> </td>
     <td style="vertical-align: top;">
 <b>아이디 저장</b><br>
 
@@ -147,7 +147,7 @@
 ### 마이페이지
 <table>
   <tr>
-    <td style="vertical-align: top;"> <img src="assets/4-1.png"/> </td>
+    <td style="vertical-align: top;"> <img src="assets/4-1.png" width="800px"/> </td>
     <td style="vertical-align: top;">
 <b>내 프로필</b><br>
 
@@ -157,7 +157,7 @@
 </td>
   </tr>
   <tr>
-    <td style="vertical-align: top;"> <img src="assets/4-2.png"/> </td>
+    <td style="vertical-align: top;"> <img src="assets/4-2.png" width="800px"/> </td>
     <td style="vertical-align: top;">
 <b>내 정보</b><br>
 
@@ -166,7 +166,7 @@
 </td>
   </tr>
   <tr>
-    <td style="vertical-align: top;"> <img src="assets/4-3.png"/> </td>
+    <td style="vertical-align: top;"> <img src="assets/4-3.png" width="800px"/> </td>
     <td style="vertical-align: top;">
 <b>내 활동</b><br>
 
@@ -179,7 +179,7 @@
 ### 아티스트 페이지
 <table>
   <tr>
-    <td style="vertical-align: top;"> <img src="assets/5-1.png"/> </td>
+    <td style="vertical-align: top;"> <img src="assets/5-1.png" width="800px"/> </td>
     <td style="vertical-align: top;">
       <ul>
         <li>화면 상단 아티스트 대표 영상 노출</li>
@@ -188,7 +188,7 @@
 </td>
   </tr>
   <tr>
-    <td style="vertical-align: top;"> <img src="assets/5-2.png"/> </td>
+    <td style="vertical-align: top;"> <img src="assets/5-2.png" width="800px"/> </td>
     <td style="vertical-align: top;">
       <ul>
         <li>아티스트 그룹에 대한 설명과 멤버별 프로필을 통한 설명</li>
@@ -197,7 +197,7 @@
 </td>
   </tr>
   <tr>
-    <td style="vertical-align: top;"> <img src="assets/5-3.png"/> </td>
+    <td style="vertical-align: top;"> <img src="assets/5-3.png" width="800px"/> </td>
     <td style="vertical-align: top;">
       <ul>
         <li>해당 아티스트 멤버십을 가입한 회원만 멤버십 전용 영상과 아티스트 일정을 자세히 볼 수 있음</li>
@@ -225,7 +225,7 @@
 ### 고객센터
 <table>
   <tr>
-    <td style="vertical-align: top;"> <img src="assets/7-1.png"/> </td>
+    <td style="vertical-align: top;"> <img src="assets/7-1.png" width="800px"/> </td>
     <td style="vertical-align: top;">
       <b>고객센터 메인화면</b>
       <ul>
@@ -234,7 +234,7 @@
 </td>
   </tr>
   <tr>
-    <td style="vertical-align: top;"> <img src="assets/7-2.png"/> </td>
+    <td style="vertical-align: top;"> <img src="assets/7-2.png" width="800px"/> </td>
     <td style="vertical-align: top;">
       <b>카테고리별 FAQ 질문 및 답변 확인</b>
       <ul>
@@ -244,7 +244,7 @@
 </td>
   </tr>
   <tr>
-    <td style="vertical-align: top;"> <img src="assets/7-3.png"/> </td>
+    <td style="vertical-align: top;"> <img src="assets/7-3.png" width="800px"/> </td>
     <td style="vertical-align: top;">
       <ul>
         <li>파일을 첨부할 수 있는 1:1 문의글 작성</li>
