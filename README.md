@@ -246,6 +246,7 @@
   <tr>
     <td style="vertical-align: top;"> <img src="assets/7-3.png" width="800px"/> </td>
     <td style="vertical-align: top;">
+      <b>1:1 문의하기</b>
       <ul>
         <li>파일을 첨부할 수 있는 1:1 문의글 작성</li>
       </ul>
