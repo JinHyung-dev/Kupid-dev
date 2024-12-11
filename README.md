@@ -256,7 +256,7 @@
 ### 관리자 페이지
 <table>
   <tr>
-    <td style="vertical-align: top;"> <img src="assets/8-1.png"/> </td>
+    <td style="vertical-align: top;"> <img src="assets/8-1.png" width="800px"/> </td>
     <td style="vertical-align: top;">
       <b>대시보드</b>
       <ul>
@@ -266,7 +266,7 @@
 </td>
   </tr>
   <tr>
-    <td style="vertical-align: top;"> <img src="assets/8-2.png"/> </td>
+    <td style="vertical-align: top;"> <img src="assets/8-2.png" width="800px"/> </td>
     <td style="vertical-align: top;">
       <b>신고 접수 목록</b>
       <ul>
@@ -277,7 +277,7 @@
 </td>
   </tr>
   <tr>
-    <td style="vertical-align: top;"> <img src="assets/8-3.png"/> </td>
+    <td style="vertical-align: top;"> <img src="assets/8-3.png" width="800px"/> </td>
     <td style="vertical-align: top;">
     <b>신고 처리</b>
       <ul>
@@ -288,8 +288,8 @@
   </tr>
    <tr>
     <td style="vertical-align: top;"> 
-      <img src="assets/8-4.png"/> 
-      <img src="assets/8-5.png"/> </td>
+      <img src="assets/8-4.png" width="800px"/> 
+      <img src="assets/8-5.png" width="800px"/> </td>
     <td style="vertical-align: top;">
     <b>공지사항 관리</b>
       <ul>
@@ -299,9 +299,9 @@
   </tr>
   <tr>
     <td style="vertical-align: top;"> 
-      <img src="assets/8-6.png"/> 
-      <img src="assets/8-7.png"/> 
-      <img src="assets/8-8.png"/> 
+      <img src="assets/8-6.png" width="800px"/> 
+      <img src="assets/8-7.png" width="800px"/> 
+      <img src="assets/8-8.png" width="800px"/> 
     </td>
     <td style="vertical-align: top;">
     <b>아티스트 관리</b>
