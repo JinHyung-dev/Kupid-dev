@@ -130,7 +130,7 @@
 ### 로그인
 <table>
   <tr>
-    <td style="vertical-align: top;"> <img src="assets/2.png" width="800px"/> </td>
+    <td style="vertical-align: top;"> <img src="assets/2.png" width="1000px"/> </td>
     <td style="vertical-align: top;">
 <b>아이디 저장</b><br>
 
