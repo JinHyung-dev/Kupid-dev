@@ -108,7 +108,7 @@
   </tr>
   <tr>
     <td style="vertical-align: top;"> 
-      <img src="assets/3-1.png" width="800px"/> </td>
+      <img src="assets/3-1.png" width="300px"/> </td>
     <td style="vertical-align: top;">
 <b>이메일 검증</b><br>
 
@@ -118,7 +118,7 @@
   </tr>
   <tr>
     <td style="vertical-align: top;"> 
-      <img src="assets/3-2.png" width="800px"/> </td>
+      <img src="assets/3-2.png" width="300px"/> </td>
     <td style="vertical-align: top;">
 <b>주소검증</b><br>
 
